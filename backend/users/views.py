@@ -1,8 +1,9 @@
 from django.shortcuts import render
 from rest_framework.generics import CreateAPIView
 from django.contrib.auth.models import User
-from .serializers import RegisterSerializer
-from rest_framework import status
+from .models import Profile
+from .serializers import RegisterSerializer, ProfileSerializer
+from rest_framework import status, viewsets
 from rest_framework.response import Response
 from rest_framework.authtoken.models import Token
 
@@ -21,3 +22,14 @@ class RegisterAPI(CreateAPIView):
         data["key"] = token.key
         headers = self.get_success_headers(serializer.data)
         return Response(data, status=status.HTTP_201_CREATED, headers=headers)
+
+
+class ProfileView(viewsets.ModelViewSet):
+    queryset = Profile.objects.all()
+    serializer_class = ProfileSerializer
+
+    def get_queryset(self):
+        queryset = super().get_queryset()
+        if not self.request.is_staff:
+            queryset = queryset.filter(user=self.request.user)
+        return queryset

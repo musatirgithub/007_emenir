@@ -3,6 +3,7 @@ from rest_framework import serializers
 # User tabloma register yapacağım için
 from django.contrib.auth.models import User
 # Rest framework sağladığı validatorlardan uniquevalidator (restframework dokümanı)
+from .models import Profile
 from rest_framework.validators import UniqueValidator
 from django.contrib.auth.password_validation import validate_password
 from dj_rest_auth.serializers import TokenSerializer
@@ -74,3 +75,15 @@ class CustomTokenSerializer(TokenSerializer):
 
     class Meta(TokenSerializer.Meta):
         fields = ("key", "user")
+
+
+class ProfileSerializer(serializers.ModelSerializer):
+    class Meta:
+        model = Profile
+        fields = (
+            "user",
+            "kimlik_no",
+            "iban",
+            "telefon",
+            "adres"
+        )
