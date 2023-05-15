@@ -8,6 +8,8 @@ class Profile(models.Model):
     user = models.OneToOneField(
         User, related_name="profiles", on_delete=models.CASCADE)
     kimlik_no = models.CharField(max_length=11, blank=True, null=True)
+    isim = models.CharField(max_length=25, blank=True, null=True)
+    soyisim = models.CharField(max_length=25, blank=True, null=True)
     iban = models.CharField(max_length=26, blank=True, null=True)
     phone = models.CharField(max_length=10, blank=True, null=True)
     # plate_num = models.CharField(max_length=10, blank=True, null=True)
