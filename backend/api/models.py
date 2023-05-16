@@ -9,7 +9,8 @@ class Expert(models.Model):
     soyisim = models.CharField(max_length=25)
     iban = models.CharField(max_length=26, blank=True, null=True)
     telefon = models.BigIntegerField()
-    email = models.CharField(max_length=25, unique=True, blank=True, null=True)
+    email = models.EmailField(
+        max_length=25, unique=True, blank=True, null=True)
 
     def __str__(self) -> str:
         return f"{self.isim} {self.soyisim}"
@@ -23,7 +24,8 @@ class Sigorta(models.Model):
     firma_adi = models.CharField(max_length=25)
     adres = models.CharField(max_length=100, blank=True, null=True)
     telefon = models.BigIntegerField(blank=True, null=True)
-    email = models.CharField(max_length=25, unique=True, blank=True, null=True)
+    email = models.EmailField(
+        max_length=25, unique=True, blank=True, null=True)
 
     def __str__(self) -> str:
         return f"{self.firma_adi}"
@@ -40,7 +42,8 @@ class Araci(models.Model):
     soyisim = models.CharField(max_length=25)
     iban = models.CharField(max_length=26, blank=True, null=True)
     telefon = models.BigIntegerField()
-    email = models.CharField(max_length=25, unique=True, blank=True, null=True)
+    email = models.EmailField(
+        max_length=25, unique=True, blank=True, null=True)
 
     def __str__(self) -> str:
         return f"{self.isim} {self.soyisim}"

@@ -1,8 +1,13 @@
 from rest_framework import serializers
 from .models import Expert, Sigorta, Araci, Arac, AnlasmaModeli, KazaKaydi
+from rest_framework.validators import UniqueValidator
 
 
 class ExpertSerializer(serializers.ModelSerializer):
+    email = serializers.EmailField(
+        validators=[UniqueValidator(queryset=Expert.objects.all())]
+    )
+
     class Meta:
         model = Expert
         fields = (
@@ -16,6 +21,10 @@ class ExpertSerializer(serializers.ModelSerializer):
 
 
 class SigortaSerializer(serializers.ModelSerializer):
+    email = serializers.EmailField(
+        validators=[UniqueValidator(queryset=Sigorta.objects.all())]
+    )
+
     class Meta:
         model = Sigorta
         fields = (
@@ -28,6 +37,10 @@ class SigortaSerializer(serializers.ModelSerializer):
 
 
 class AraciSerializer(serializers.ModelSerializer):
+    email = serializers.EmailField(
+        validators=[UniqueValidator(queryset=Araci.objects.all())]
+    )
+
     class Meta:
         model = Araci
         fields = (
