@@ -54,6 +54,7 @@ class Arac(models.Model):
     plaka = models.CharField(max_length=11)
     marka = models.CharField(max_length=25)
     model = models.CharField(max_length=25)
+    yil = models.SmallIntegerField(blank=True, null=True)
     sigorta = models.ForeignKey(
         Sigorta, on_delete=models.SET_NULL, blank=True, null=True)
     sigorta_no = models.IntegerField()
