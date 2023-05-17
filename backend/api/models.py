@@ -1,5 +1,6 @@
 from django.db import models
 from users.models import Profile
+from django.contrib.auth.models import User
 
 # Create your models here.
 
@@ -10,7 +11,7 @@ class Expert(models.Model):
     iban = models.CharField(max_length=26, blank=True, null=True)
     telefon = models.BigIntegerField()
     email = models.EmailField(
-        max_length=25, unique=True, blank=True, null=True)
+        max_length=75, unique=True, blank=True, null=True)
 
     def __str__(self) -> str:
         return f"{self.isim} {self.soyisim}"
@@ -22,10 +23,10 @@ class Expert(models.Model):
 
 class Sigorta(models.Model):
     firma_adi = models.CharField(max_length=25)
-    adres = models.CharField(max_length=100, blank=True, null=True)
+    adres = models.CharField(max_length=150, blank=True, null=True)
     telefon = models.BigIntegerField(blank=True, null=True)
     email = models.EmailField(
-        max_length=25, unique=True, blank=True, null=True)
+        max_length=75, unique=True, blank=True, null=True)
 
     def __str__(self) -> str:
         return f"{self.firma_adi}"
@@ -43,7 +44,7 @@ class Araci(models.Model):
     iban = models.CharField(max_length=26, blank=True, null=True)
     telefon = models.BigIntegerField()
     email = models.EmailField(
-        max_length=25, unique=True, blank=True, null=True)
+        max_length=75, unique=True, blank=True, null=True)
 
     def __str__(self) -> str:
         return f"{self.isim} {self.soyisim}"
@@ -89,6 +90,8 @@ class KazaKaydi(models.Model):
         ("4", "Tutarın Sigorta Şirketince Ödenmesi"),
         ("5", "Süreç Tamamlandı")
     )
+    user = models.ForeignKey(
+        User, on_delete=models.SET_NULL, blank=True, null=True)
     arac = models.ForeignKey(
         Arac, on_delete=models.SET_NULL, blank=True, null=True)
     araci = models.ForeignKey(
