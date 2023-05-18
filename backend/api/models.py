@@ -111,6 +111,8 @@ class KazaKaydi(models.Model):
     expert = models.ForeignKey(
         Expert, on_delete=models.SET_NULL, blank=True, null=True)
     tahmini_deger_kaybi = models.PositiveIntegerField(blank=True, null=True)
+    gerceklesen_deger_kaybi = models.PositiveIntegerField(
+        blank=True, null=True)
 
     def __str__(self) -> str:
         return f"{self.profil.isim} {self.profil.soyisim} {self.arac.plaka} {self.kaza_tarihi}"

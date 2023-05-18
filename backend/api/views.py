@@ -23,7 +23,7 @@ class SigortaView(viewsets.ModelViewSet):
 class AraciView(viewsets.ModelViewSet):
     queryset = Araci.objects.all()
     serializer_class = AraciSerializer
-    permission_classes = (IsAdminUser,)
+    permission_classes = (IsAdminOrReadOnly,)
 
 
 class AracView(viewsets.ModelViewSet):
