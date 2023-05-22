@@ -18,10 +18,10 @@ const useAuthCalls = () => {
     dispatch(fetchStart());
     try {
       const { data } = await axiosPublic.post("users/auth/login/", userInfo);
-
+      console.log(data);
       dispatch(loginSuccess(data));
       toastSuccessNotify("Login performed");
-      navigate("/stock");
+      navigate("/records");
     } catch (err) {
       dispatch(fetchFail());
       toastErrorNotify("Login can not be performed");

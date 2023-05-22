@@ -48,6 +48,7 @@ INSTALLED_APPS = [
     'drf_yasg',
     'rest_framework.authtoken',
     'dj_rest_auth',
+    "corsheaders",
     # 'debug_toolbar',          # This part is moved to dev.py file
 ]
 
@@ -55,6 +56,7 @@ MIDDLEWARE = [
     # "debug_toolbar.middleware.DebugToolbarMiddleware",                # This part is moved to dev.py file
     'django.middleware.security.SecurityMiddleware',
     'django.contrib.sessions.middleware.SessionMiddleware',
+    "corsheaders.middleware.CorsMiddleware",
     'django.middleware.common.CommonMiddleware',
     'django.middleware.csrf.CsrfViewMiddleware',
     'django.contrib.auth.middleware.AuthenticationMiddleware',
@@ -197,3 +199,5 @@ REST_FRAMEWORK = {
 REST_AUTH_SERIALIZERS = {
     'TOKEN_SERIALIZER': 'users.serializers.CustomTokenSerializer',
 }
+
+CORS_ORIGIN_ALLOW_ALL = True
