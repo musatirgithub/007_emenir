@@ -7,7 +7,7 @@ const Register = () => {
   return (
     <Formik
       initialValues={{ email: "", password: "" }}
-      validationSchema={loginSchema}
+      validationSchema={registerSchema}
       onSubmit={(values, actions) => {
         register({ ...values, password2: values.password });
         actions.resetForm();
@@ -18,4 +18,4 @@ const Register = () => {
   );
 };
 
-export default Login;
+export default Register;

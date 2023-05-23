@@ -14,4 +14,5 @@ def create_Token(sender, instance=None, created=False, **kwargs):
 @receiver(post_save, sender=User)
 def create_Profile(sender, instance=None, created=False, **kwargs):
     if created:
-        Profile.objects.create(user=instance)
+        Profile.objects.create(
+            user=instance, isim=instance.first_name, soyisim=instance.last_name)

@@ -27,7 +27,9 @@ const Navbar = () => {
             <li>
               <Link to="/login">Giriş</Link>
             </li>
-            <li>Kayıt</li>
+            <li>
+              <Link to="/register">Kayıt</Link>
+            </li>
           </ul>
         ) : (
           <ul>
