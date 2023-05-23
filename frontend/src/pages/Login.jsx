@@ -1,5 +1,5 @@
 import { Formik } from "formik";
-import LoginForm, { loginSchema } from "../components/LoginForm";
+import LoginForm, { loginSchema } from "../components/loginForm";
 import useAuthCalls from "../hooks/useAuthCalls";
 
 const Login = () => {

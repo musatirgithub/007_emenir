@@ -31,26 +31,26 @@ const useAuthCalls = () => {
   const logout = async () => {
     dispatch(fetchStart());
     try {
-      await axiosPublic.post("account/auth/logout/");
+      await axiosPublic.post("users/auth/logout/");
       dispatch(logoutSuccess());
-      toastSuccessNotify("Logout performed");
+      toastSuccessNotify("Çıkış Başarılı!");
       navigate("/");
     } catch (err) {
       dispatch(fetchFail());
-      toastErrorNotify("Logout can not be performed");
+      toastErrorNotify("Çıkış yapılamadı!");
     }
   };
 
   const register = async (userInfo) => {
     dispatch(fetchStart());
     try {
-      const { data } = await axiosPublic.post("account/register/", userInfo);
+      const { data } = await axiosPublic.post("users/register/", userInfo);
       dispatch(registerSuccess(data));
-      toastSuccessNotify("Register performed");
-      navigate("/stock");
+      toastSuccessNotify("Kayıt Başarılı");
+      navigate("/");
     } catch (err) {
       dispatch(fetchFail());
-      toastErrorNotify("Register can not be performed");
+      toastErrorNotify("Kayıt yapılamadı!");
     }
   };
 

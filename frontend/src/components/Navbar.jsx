@@ -1,9 +1,11 @@
 import React from "react";
 import { useSelector } from "react-redux";
 import { Link } from "react-router-dom";
+import useAuthCalls from "../hooks/useAuthCalls";
 
 const Navbar = () => {
   const { currentUser } = useSelector((state) => state.auth);
+  const { logout } = useAuthCalls();
   return (
     <div className="flex justify-between">
       <div className="flex gap-[1rem]">
@@ -13,18 +15,25 @@ const Navbar = () => {
           class="object-cover h-24 w-48"
         />
         <p>Emenir Hukuk</p>
-        {currentUser ? <p>Merhaba ${currentUser}</p> : <p>Merhaba ziyaretçi</p>}
+        {currentUser ? <p>Merhaba {currentUser}</p> : <p>Merhaba ziyaretçi</p>}
       </div>
       <ul className="hidden lg:block lg:flex gap-[1rem]">
         <li>Home</li>
         <li>About</li>
         <li>Değer Kaybı</li>
         <li>İletişim</li>
-
-        <li>
-          <Link to="/login">Giriş</Link>
-        </li>
-        <li>Kayıt</li>
+        {!currentUser ? (
+          <ul>
+            <li>
+              <Link to="/login">Giriş</Link>
+            </li>
+            <li>Kayıt</li>
+          </ul>
+        ) : (
+          <ul>
+            <li onClick={logout}>Çıkış</li>
+          </ul>
+        )}
       </ul>
     </div>
   );
