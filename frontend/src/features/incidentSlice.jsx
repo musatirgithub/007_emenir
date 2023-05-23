@@ -4,38 +4,22 @@ const incidentSlice = createSlice({
   name: "incident",
 
   initialState: {
-    // purchases: null,
-    // sales: null,
-    // products: null,
-    // brands: null,
-    // firms: null,
-    // categories: null,
-    // loading: false,
-    // error: false,
+    record: null,
+    mediator: null,
   },
   reducers: {
     fetchStart: (state) => {
       state.loading = true;
       state.error = false;
     },
-    getSuccess: (state, { payload: { data, url } }) => {
+    // getSuccess: (state, { payload: { data, url } }) => {
+    //   state.loading = false;
+    //   state[url] = data;
+    // },
+    getRecordAndMediatorSuccess: (state, { payload }) => {
       state.loading = false;
-      state[url] = data;
-    },
-    getProCatBrandsSuccess: (state, { payload }) => {
-      state.loading = false;
-      state.products = payload[0];
-      state.categories = payload[1];
-      state.brands = payload[2];
-    },
-    getAllStockSuccess: (state, { payload }) => {
-      state.loading = false;
-      state.purchases = payload[0];
-      state.firms = payload[1];
-      state.brands = payload[2];
-      state.sales = payload[3];
-      state.products = payload[4];
-      state.categories = payload[5];
+      state.record = payload[0];
+      state.mediator = payload[1];
     },
     fetchFail: (state) => {
       state.loading = false;
@@ -44,11 +28,6 @@ const incidentSlice = createSlice({
   },
 });
 
-export const {
-  fetchStart,
-  getSuccess,
-  fetchFail,
-  getProCatBrandsSuccess,
-  getAllStockSuccess,
-} = incidentSlice.actions;
+export const { fetchStart, getRecordAndMediatorSuccess, fetchFail } =
+  incidentSlice.actions;
 export default incidentSlice.reducer;
