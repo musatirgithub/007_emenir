@@ -1,6 +1,7 @@
 from rest_framework import serializers
 from .models import Expert, Sigorta, Araci, Arac, AnlasmaModeli, KazaKaydi
 from rest_framework.validators import UniqueValidator
+from dj_rest_auth.serializers import UserDetailsSerializer
 
 
 class ExpertSerializer(serializers.ModelSerializer):
@@ -79,10 +80,18 @@ class AnlasmaModeliSerializer(serializers.ModelSerializer):
 
 
 class KazaKaydiSerializer(serializers.ModelSerializer):
+    user = UserDetailsSerializer()
+    arac = AracSerializer()
+    araci = AraciSerializer()
+    sigorta = SigortaSerializer()
+    anlasma_modeli = AnlasmaModeliSerializer()
+    expert = ExpertSerializer()
+
     class Meta:
         model = KazaKaydi
         fields = (
             "id",
+            "user",
             "arac",
             "araci",
             "profil",
@@ -93,6 +102,7 @@ class KazaKaydiSerializer(serializers.ModelSerializer):
             "asama_tarihi",
             "expert",
             "tahmini_deger_kaybi",
+            "gerceklesen_deger_kaybi",
         )
 
     def get_fields(self):
