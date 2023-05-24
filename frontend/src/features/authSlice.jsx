@@ -7,7 +7,8 @@ const authSlice = createSlice({
     currentUser: null,
     loading: false,
     error: false,
-    isAdmin: false,
+    is_staff: false,
+    email: null,
     token: null,
   },
   reducers: {
@@ -19,6 +20,7 @@ const authSlice = createSlice({
       state.loading = false;
       state.currentUser = payload?.user?.username;
       state.isAdmin = payload?.user?.is_staff;
+      state.email = payload?.user.email;
       state.token = payload?.key;
     },
     logoutSuccess: (state) => {
