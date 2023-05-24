@@ -6,7 +6,7 @@ import {
   getRecordAndMediatorSuccess,
 } from "../features/incidentSlice";
 import useAxios from "./useAxios";
-import { toastSuccessNotify, toastErrorNotify } from "../helper/ToastNotify";
+// import { toastSuccessNotify, toastErrorNotify } from "../helper/ToastNotify";
 
 const useApiCalls = () => {
   const dispatch = useDispatch();
@@ -47,4 +47,4 @@ const useApiCalls = () => {
   };
 };
 
-export default useStockCalls;
+export default useApiCalls;

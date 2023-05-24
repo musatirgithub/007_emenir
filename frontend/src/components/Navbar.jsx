@@ -20,8 +20,12 @@ const Navbar = () => {
       <ul className="hidden lg:block lg:flex gap-[1rem]">
         <li>Home</li>
         <li>About</li>
-        <li>Değer Kaybı</li>
+        <li>Değer Kaybı Nedir</li>
         <li>İletişim</li>
+        <li>
+          <Link to="/records">Kayıtlar</Link>
+        </li>
+
         {!currentUser ? (
           <ul>
             <li>
@@ -33,7 +37,12 @@ const Navbar = () => {
           </ul>
         ) : (
           <ul>
-            <li onClick={logout}>Çıkış</li>
+            <li>
+              <Link to="/profile">Profilim</Link>
+            </li>
+            <li onClick={logout} className="cursor-pointer">
+              <Link to="/">Çıkış</Link>
+            </li>
           </ul>
         )}
       </ul>
