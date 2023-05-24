@@ -18,13 +18,15 @@ const Navbar = () => {
         {currentUser ? <p>Merhaba {currentUser}</p> : <p>Merhaba ziyaretçi</p>}
       </div>
       <ul className="hidden lg:block lg:flex gap-[1rem]">
-        <li>Home</li>
-        <li>About</li>
+        <li>Ana Sayfa</li>
+        <li>Hakkımızda</li>
         <li>Değer Kaybı Nedir</li>
         <li>İletişim</li>
-        <li>
-          <Link to="/records">Kayıtlar</Link>
-        </li>
+        {currentUser ? (
+          <li>
+            <Link to="/records">Kayıtlar</Link>
+          </li>
+        ) : null}
 
         {!currentUser ? (
           <ul>
