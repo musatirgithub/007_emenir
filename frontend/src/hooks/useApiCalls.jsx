@@ -4,6 +4,7 @@ import {
   fetchFail,
   fetchStart,
   getRecordAndMediatorSuccess,
+  getProfileSuccess,
 } from "../features/incidentSlice";
 import useAxios from "./useAxios";
 // import { toastSuccessNotify, toastErrorNotify } from "../helper/ToastNotify";
@@ -42,8 +43,22 @@ const useApiCalls = () => {
     }
   };
 
+  const getProfile = async () => {
+    dispatch(fetchStart());
+    try {
+      const { profile } = await axiosWithToken.get("users/profile/");
+
+      dispatch(getProfileSuccess(profile?.data));
+    } catch (error) {
+      console.log(error);
+      dispatch(fetchFail());
+    }
+  };
+  //!------------- PUT CALLS ----------------
+
   return {
     getRecordAndMediator,
+    getProfile,
   };
 };
 

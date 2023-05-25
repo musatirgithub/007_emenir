@@ -6,6 +6,7 @@ const incidentSlice = createSlice({
   initialState: {
     record: null,
     mediator: null,
+    profile: null,
   },
   reducers: {
     fetchStart: (state) => {
@@ -21,6 +22,10 @@ const incidentSlice = createSlice({
       state.record = payload[0];
       state.mediator = payload[1];
     },
+    getProfileSuccess: (state, { payload }) => {
+      state.loading = false;
+      state.profile = payload;
+    },
     fetchFail: (state) => {
       state.loading = false;
       state.error = true;
@@ -28,6 +33,10 @@ const incidentSlice = createSlice({
   },
 });
 
-export const { fetchStart, getRecordAndMediatorSuccess, fetchFail } =
-  incidentSlice.actions;
+export const {
+  fetchStart,
+  getRecordAndMediatorSuccess,
+  getProfileSuccess,
+  fetchFail,
+} = incidentSlice.actions;
 export default incidentSlice.reducer;

@@ -9,6 +9,7 @@ import Contact from "../pages/Contact";
 import Damage from "../pages/Damage";
 import AccidentRecords from "../pages/AccidentRecords";
 import Navbar from "../components/Navbar";
+import Profile from "../pages/Profile";
 
 const AppRouter = () => {
   return (
@@ -21,6 +22,7 @@ const AppRouter = () => {
         <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/damage" element={<Damage />} />
+        <Route path="/profile" element={<Profile />} />
         <Route path="/records" element={<PrivateRouter />}>
           <Route path="" element={<AccidentRecords />}></Route>
         </Route>

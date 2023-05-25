@@ -82,9 +82,10 @@ class ProfileSerializer(serializers.ModelSerializer):
     class Meta:
         model = Profile
         fields = (
+            "id",
             "user",
             "kimlik_no",
             "iban",
-            "telefon",
-            "adres"
+            "phone",
+            "address",
         )

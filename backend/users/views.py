@@ -1,5 +1,6 @@
 from django.shortcuts import render
 from rest_framework.generics import CreateAPIView, RetrieveUpdateDestroyAPIView
+from rest_framework.viewsets import ModelViewSet
 from django.contrib.auth.models import User
 from .models import Profile
 from .serializers import RegisterSerializer, ProfileSerializer
@@ -24,12 +25,11 @@ class RegisterAPI(CreateAPIView):
         return Response(data, status=status.HTTP_201_CREATED, headers=headers)
 
 
-class ProfileView(RetrieveUpdateDestroyAPIView):
+class ProfileView(ModelViewSet):
     queryset = Profile.objects.all()
     serializer_class = ProfileSerializer
 
     def get_queryset(self):
         queryset = super().get_queryset()
-        if not self.request.is_staff:
-            queryset = queryset.filter(user=self.request.user)
+        queryset = queryset.filter(user=self.request.user)
         return queryset

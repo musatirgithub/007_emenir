@@ -108,7 +108,6 @@ class KazaKaydiSerializer(serializers.ModelSerializer):
     def get_fields(self):
         fields = super().get_fields()
         if not self.context["request"].user.is_staff:
-            fields.pop("araci")
             fields.pop("profil")
             fields.pop("anlasma_modeli")
             fields.pop("expert")
