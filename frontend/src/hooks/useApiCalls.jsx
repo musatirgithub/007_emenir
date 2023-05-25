@@ -46,9 +46,8 @@ const useApiCalls = () => {
   const getProfile = async () => {
     dispatch(fetchStart());
     try {
-      const { profile } = await axiosWithToken.get("users/profile/");
-
-      dispatch(getProfileSuccess(profile?.data));
+      const { data } = await axiosWithToken.get("users/profile/");
+      dispatch(getProfileSuccess(data));
     } catch (error) {
       console.log(error);
       dispatch(fetchFail());

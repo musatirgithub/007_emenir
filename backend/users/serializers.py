@@ -85,6 +85,8 @@ class ProfileSerializer(serializers.ModelSerializer):
             "id",
             "user",
             "kimlik_no",
+            "isim",
+            "soyisim",
             "iban",
             "phone",
             "address",
