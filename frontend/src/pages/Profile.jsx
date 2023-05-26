@@ -5,25 +5,32 @@ import useApiCalls from "../hooks/useApiCalls";
 const Profile = () => {
   const { getProfile } = useApiCalls();
   const { profile } = useSelector((state) => state.incident);
-  //   const [isLoading, setIsLoading] = useState(true);
+  const [isLoading, setIsLoading] = useState(true);
   useEffect(() => {
     getProfile();
-    // setIsLoading(false);
+    setIsLoading(false);
   }, []);
 
   //   console.log("I'm your profile:", profile);
-  if (profile == null || profile == undefined) {
+  if (isLoading) {
     return <div>...Loading</div>;
   }
   return (
     <main>
-      <p>id: {profile[0].id}</p>
-      <p>isim: {profile[0].isim}</p>
-      <p>soyisim:{profile[0].soyisim}</p>
-      <p>kimlik_no:{profile[0].kimlik_no}</p>
-      <p>telefon:{profile[0].phone}</p>
-      <p>adres:{profile[0].address}</p>
-      <p>IBAN:{profile[0].iban}</p>
+      {profile?.map((item, index) => {
+        const { id, isim, soyisim, kimlik_no, phone, address, iban } = item;
+        return (
+          <div key={index}>
+            <p>id: {id}</p>
+            <p>isim: {isim}</p>
+            <p>soyisim:{soyisim}</p>
+            <p>kimlik_no:{kimlik_no}</p>
+            <p>telefon:{phone}</p>
+            <p>adres:{address}</p>
+            <p>IBAN:{iban}</p>
+          </div>
+        );
+      })}
     </main>
   );
 };
