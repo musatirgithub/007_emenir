@@ -3,7 +3,7 @@ const styles = {
   field:
     "bg-[#18181b] text-[#C19461] focus:outline-none focus:shadow-outline border border-gray-300 rounded py-2 px-4 block w-full appearance-none placeholder-[#3A3B3C]",
   button:
-    " bg-[#18181b] text-[#C19461] font-bold py-2 px-4 w-full rounded hover:bg-gray-600",
+    " bg-[#18181b] text-[#C19461] font-bold py-2 px-4 w-full rounded hover:bg-zinc-800",
   errorMsg: "text-red-600 font-bold text-sm",
 };
 
