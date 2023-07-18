@@ -1,7 +1,9 @@
+from rest_framework.filters import SearchFilter, OrderingFilter
+from django_filters.rest_framework import DjangoFilterBackend
 from django.shortcuts import render
 from rest_framework import viewsets
-from .models import Expert, Sigorta, Araci, Arac, AnlasmaModeli, KazaKaydi
-from .serializers import ExpertSerializer, SigortaSerializer, AraciSerializer, AracSerializer, AnlasmaModeliSerializer, KazaKaydiSerializer
+from .models import Expert, Sigorta, Araci, Arac, AnlasmaModeli, KazaKaydi, SigortaAvukati
+from .serializers import ExpertSerializer, SigortaAvukatiSerializer, SigortaSerializer, AraciSerializer, AracSerializer, AnlasmaModeliSerializer, KazaKaydiSerializer
 from rest_framework.permissions import IsAdminUser
 from .permissions import IsAdminOrReadOnly
 
@@ -11,6 +13,11 @@ from .permissions import IsAdminOrReadOnly
 class ExpertView(viewsets.ModelViewSet):
     queryset = Expert.objects.all()
     serializer_class = ExpertSerializer
+    permission_classes = (IsAdminUser,)
+
+class SigortaAvukatiView(viewsets.ModelViewSet):
+    queryset = SigortaAvukati.objects.all()
+    serializer_class = SigortaAvukatiSerializer
     permission_classes = (IsAdminUser,)
 
 
@@ -42,6 +49,9 @@ class KazaKaydiView(viewsets.ModelViewSet):
     queryset = KazaKaydi.objects.all()
     serializer_class = KazaKaydiSerializer
     permission_classes = (IsAdminOrReadOnly,)
+    # filter_backends = [DjangoFilterBackend, SearchFilter, OrderingFilter]
+    # filterset_fields = ['user.first_name','user.last_name']
+    # search_fields = ['user.first_name','user.last_name']
 
     def get_queryset(self):
         queryset = super().get_queryset()

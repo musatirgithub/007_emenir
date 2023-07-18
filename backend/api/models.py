@@ -21,12 +21,29 @@ class Expert(models.Model):
         verbose_name_plural = "Expertler"
 
 
+class SigortaAvukati(models.Model):
+    isim = models.CharField(max_length=25)
+    soyisim = models.CharField(max_length=25)
+    telefon = models.BigIntegerField()
+    email = models.EmailField(
+        max_length=75, blank=True, null=True)
+    adres = models.CharField(max_length=200, blank=True, null=True)
+
+    def __str__(self):
+        return f"{self.isim} {self.soyisim}"
+
+    class Meta:
+        verbose_name = "Sigorta Avukati"
+        verbose_name_plural = "Sigorta Avukatlari"
+
+
 class Sigorta(models.Model):
     firma_adi = models.CharField(max_length=25)
-    adres = models.CharField(max_length=150, blank=True, null=True)
+    adres = models.CharField(max_length=200, blank=True, null=True)
     telefon = models.BigIntegerField(blank=True, null=True)
     email = models.EmailField(
         max_length=75, unique=True, blank=True, null=True)
+    sigortaavukati = models.ForeignKey(SigortaAvukati, on_delete=models.SET_NULL, blank=True, null=True)
 
     def __str__(self) -> str:
         return f"{self.firma_adi}"
@@ -99,8 +116,8 @@ class KazaKaydi(models.Model):
     profil = models.ForeignKey(
         Profile, on_delete=models.SET_NULL, blank=True, null=True)
     kaza_tarihi = models.DateField(blank=True, null=True)
-    sigorta = models.ForeignKey(
-        Sigorta, on_delete=models.SET_NULL, blank=True, null=True)
+    # sigorta = models.ForeignKey(
+    #     Sigorta, on_delete=models.SET_NULL, blank=True, null=True)
     anlasma_modeli = models.ForeignKey(
         AnlasmaModeli, on_delete=models.SET_NULL, blank=True, null=True)
     asama = models.CharField(
@@ -120,3 +137,4 @@ class KazaKaydi(models.Model):
     class Meta:
         verbose_name = "KazaKaydi"
         verbose_name_plural = "KazaKayıtları"
+        ordering = ('-kaza_tarihi',)

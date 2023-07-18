@@ -1,5 +1,5 @@
 from rest_framework import serializers
-from .models import Expert, Sigorta, Araci, Arac, AnlasmaModeli, KazaKaydi
+from .models import Expert, Sigorta, Araci, Arac, AnlasmaModeli, KazaKaydi, SigortaAvukati
 from rest_framework.validators import UniqueValidator
 from dj_rest_auth.serializers import UserDetailsSerializer
 
@@ -20,6 +20,17 @@ class ExpertSerializer(serializers.ModelSerializer):
             "email",
         )
 
+class SigortaAvukatiSerializer(serializers.ModelSerializer):
+    class Meta:
+        model= SigortaAvukati
+        fields = (
+            "isim",
+            "soyisim",
+            "telefon",
+            "email",
+            "adres",
+        )
+
 
 class SigortaSerializer(serializers.ModelSerializer):
     email = serializers.EmailField(
@@ -34,6 +45,7 @@ class SigortaSerializer(serializers.ModelSerializer):
             "adres",
             "telefon",
             "email",
+            "sigortaavukati",
         )
 
 
@@ -83,7 +95,7 @@ class KazaKaydiSerializer(serializers.ModelSerializer):
     user = UserDetailsSerializer()
     arac = AracSerializer()
     araci = AraciSerializer()
-    sigorta = SigortaSerializer()
+    # sigorta = SigortaSerializer()
     anlasma_modeli = AnlasmaModeliSerializer()
     expert = ExpertSerializer()
 
@@ -96,7 +108,7 @@ class KazaKaydiSerializer(serializers.ModelSerializer):
             "araci",
             "profil",
             "kaza_tarihi",
-            "sigorta",
+            # "sigorta",
             "anlasma_modeli",
             "asama",
             "asama_tarihi",
