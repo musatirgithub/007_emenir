@@ -39,8 +39,8 @@ const authSlice = createSlice({
       state.currentUser = payload?.username;
       state.first_name = payload?.first_name;
       state.last_name = payload?.last_name;
-      state.isAdmin = payload?.user?.is_staff || payload?.user?.is_superuser;
-      state.email = payload?.user?.email;
+      state.isAdmin = payload?.is_staff || payload?.is_superuser;
+      state.email = payload?.email;
       state.token = payload?.key;
       state.error = false;
     },

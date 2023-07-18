@@ -43,8 +43,8 @@ class RegisterSerializer(serializers.ModelSerializer):
             'email',
             'password',
             'password2',
-            "is_admin",]
-        read_only_fields = ("is_admin", )
+            "is_staff",]
+        read_only_fields = ("is_staff", )
 
         # Rest framework dokümanına gittik. Şu an serilizer yazdığımız için API guide serializers tıkladık. Sonra sol menüde validation tıkladık. Birden fazla field için validation yaptığımızdan object-level validation a bakıyoruz. Tek olsa field level a bakardık.
 

@@ -12,10 +12,6 @@ const AccidentRecords = () => {
   useEffect(() => {
     getRecordAndMediator();
   }, []);
-  console.log("loading2:", loading2)
-  console.log("currentUser:", currentUser)
-  console.log("first_name:", first_name)
-  console.log("last_name:", last_name)
   if (loading) {
     return <section className="min-h-[calc(100vh-8rem)] text-[2rem] flex justify-center items-center "><div>...Yükleniyor</div></section>;
   }
@@ -38,7 +34,7 @@ const AccidentRecords = () => {
       );
     }
   }
-  if (isAdmin) {
+  if (isAdmin || record[0].user.email !== email) {
     return <AraciKayitlar record={record} />;
   }
   if (!isAdmin) {
