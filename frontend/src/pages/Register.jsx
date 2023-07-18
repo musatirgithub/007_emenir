@@ -6,10 +6,17 @@ const Register = () => {
   const { register } = useAuthCalls();
   return (
     <Formik
-      initialValues={{ email: "", password: "" }}
+      initialValues={{
+        username: "",
+        first_name: "",
+        last_name: "",
+        email: "",
+        password: "",
+        password2: "",
+      }}
       validationSchema={registerSchema}
       onSubmit={(values, actions) => {
-        register({ ...values, password2: values.password });
+        register({ ...values });
         actions.resetForm();
         actions.setSubmitting(false);
       }}

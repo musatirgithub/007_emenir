@@ -5,9 +5,10 @@ import {
   fetchStart,
   getRecordAndMediatorSuccess,
   getProfileSuccess,
+  updateProfileSuccess,
 } from "../features/incidentSlice";
 import useAxios from "./useAxios";
-// import { toastSuccessNotify, toastErrorNotify } from "../helper/ToastNotify";
+import { toastSuccessNotify, toastErrorNotify } from "../helper/ToastNotify";
 
 const useApiCalls = () => {
   const dispatch = useDispatch();
@@ -54,10 +55,25 @@ const useApiCalls = () => {
     }
   };
   //!------------- PUT CALLS ----------------
+  const updateProfile = async (updateData) => {
+    dispatch(fetchStart());
+    try {
+      const { data } = await axiosWithToken.put(`users/profile/${updateData.id}/`, updateData);
+      dispatch(updateProfileSuccess(data));
+      getProfile();
+      toastSuccessNotify("Profil güncellendi!");
+    } catch (error) {
+      console.log(error);
+      dispatch(fetchFail());
+      toastErrorNotify("Profil güncellenemedi!");
+    }
+  };
+
 
   return {
     getRecordAndMediator,
     getProfile,
+    updateProfile,
   };
 };
 

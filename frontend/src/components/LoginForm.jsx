@@ -1,6 +1,7 @@
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import { Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import styles from "../helper/styles";
+import formPage_picture from "../pics/login_register.jpg";
 
 export const loginSchema = Yup.object().shape({
   email: Yup.string()
@@ -17,8 +18,14 @@ export const loginSchema = Yup.object().shape({
 
 const loginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
   return (
-    <>
-      <Form>
+    <section className="flex justify-evenly items-center form-container">
+      <div className="hidden lg:block form-img-container">
+        <img src={formPage_picture} alt="form page" />
+      </div>
+      <Form className="w-[22rem]" autocomplete="off">
+        <h1 className="text-center text-[#18181b] text-[1.5rem] font-bold">
+          Giriş
+        </h1>
         <label className={styles.label} htmlFor="Email">
           Email
         </label>
@@ -53,11 +60,11 @@ const loginForm = ({ values, handleChange, errors, touched, handleBlur }) => {
         />
         <div className="mt-8">
           <button type="submit" className={styles.button}>
-            Login
+            Giriş
           </button>
         </div>
       </Form>
-    </>
+    </section>
   );
 };
 

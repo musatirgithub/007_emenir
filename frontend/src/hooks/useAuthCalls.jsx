@@ -18,7 +18,6 @@ const useAuthCalls = () => {
     dispatch(fetchStart());
     try {
       const { data } = await axiosPublic.post("users/auth/login/", userInfo);
-      console.log(data);
       dispatch(loginSuccess(data));
       toastSuccessNotify("Giriş Başarılı!");
       navigate("/records");

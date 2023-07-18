@@ -4,12 +4,12 @@ import Login from "../pages/Login";
 import Register from "../pages/Register";
 import PrivateRouter from "./PrivateRouter";
 import Home from "../pages/Home";
-import About from "../pages/About";
 import Contact from "../pages/Contact";
 import Damage from "../pages/Damage";
 import AccidentRecords from "../pages/AccidentRecords";
 import Navbar from "../components/Navbar";
 import Profile from "../pages/Profile";
+import Footer from "../components/Footer";
 
 const AppRouter = () => {
   return (
@@ -19,7 +19,6 @@ const AppRouter = () => {
         <Route path="/" element={<Home />} />
         <Route path="/register" element={<Register />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/about" element={<About />} />
         <Route path="/contact" element={<Contact />} />
         <Route path="/damage" element={<Damage />} />
         <Route path="/profile" element={<Profile />} />
@@ -27,6 +26,7 @@ const AppRouter = () => {
           <Route path="" element={<AccidentRecords />}></Route>
         </Route>
       </Routes>
+      <Footer />
     </Router>
   );
 };

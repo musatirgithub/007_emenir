@@ -1,6 +1,7 @@
-import { Formik, Field, Form, ErrorMessage } from "formik";
+import { Field, Form, ErrorMessage } from "formik";
 import * as Yup from "yup";
 import styles from "../helper/styles";
+import formPage_picture from "../pics/login_register.jpg";
 
 export const registerSchema = Yup.object().shape({
   username: Yup.string()
@@ -19,6 +20,10 @@ export const registerSchema = Yup.object().shape({
     .min(8, "Şifre en az 8 karakter olmalıdır!")
     .max(16, "Şifre 16 karakteri geçemez!")
     .matches(/\d+/, "Şifre rakam içermek zorundadır!"),
+  password2: Yup.string()
+    .min(8, "Şifre en az 8 karakter olmalıdır!")
+    .max(16, "Şifre 16 karakteri geçemez!")
+    .matches(/\d+/, "Şifre rakam içermek zorundadır!"),
   // .matches(/[a-z]+/, "Password must have a lowercase")
   // .matches(/[A-Z]+/, "Password must have an uppercase")
   // .matches(/[!,?{}><%&$#£+-.]+/, " Password must have a special char"),
@@ -32,8 +37,14 @@ const registerForm = ({
   handleBlur,
 }) => {
   return (
-    <>
-      <Form>
+    <section className="flex justify-evenly items-center form-container py-4">
+      <div className="hidden lg:block form-img-container">
+        <img src={formPage_picture} alt="form page" />
+      </div>
+      <Form className="w-[22rem]" autocomplete="off">
+        <h1 className="text-center text-[#18181b] text-[1.5rem] font-bold">
+          Kayıt ol
+        </h1>
         <label className={styles.label} htmlFor="username">
           Kullanıcı Adı
         </label>
@@ -75,7 +86,7 @@ const registerForm = ({
         </label>
         <Field
           className={styles.field}
-          type="last_name"
+          type="text"
           name="last_name"
           id="last_name"
           placeholder="Soyisminizi giriniz..."
@@ -83,8 +94,12 @@ const registerForm = ({
           onChange={handleChange}
           onBlur={handleBlur}
         />
-        <ErrorMessage component="a" className={styles.errorMsg} name="email" />
-        <label className={styles.label} htmlFor="Email">
+        <ErrorMessage
+          component="a"
+          className={styles.errorMsg}
+          name="last_name"
+        />
+        <label className={styles.label} htmlFor="email">
           Email
         </label>
         <Field
@@ -99,7 +114,7 @@ const registerForm = ({
         />
         <ErrorMessage component="a" className={styles.errorMsg} name="email" />
         <label className={styles.label} htmlFor="password">
-          Password
+          Şifre
         </label>
         <Field
           className={styles.field}
@@ -116,13 +131,31 @@ const registerForm = ({
           component="a"
           className={styles.errorMsg}
         />
+        <label className={styles.label} htmlFor="password2">
+          Şifre doğrulama
+        </label>
+        <Field
+          className={styles.field}
+          type="password"
+          name="password2"
+          id="password2"
+          placeholder="Şifrenizi tekrar giriniz..."
+          value={values.password2}
+          onChange={handleChange}
+          onBlur={handleBlur}
+        />
+        <ErrorMessage
+          name="password2"
+          component="a"
+          className={styles.errorMsg}
+        />
         <div className="mt-8">
           <button type="submit" className={styles.button}>
             Kayıt ol
           </button>
         </div>
       </Form>
-    </>
+    </section>
   );
 };
 
