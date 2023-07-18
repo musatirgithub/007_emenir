@@ -39,7 +39,6 @@ const useApiCalls = () => {
 
       dispatch(getRecordAndMediatorSuccess([record?.data, mediator?.data]));
     } catch (error) {
-      console.log(error);
       dispatch(fetchFail());
     }
   };

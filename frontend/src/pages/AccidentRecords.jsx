@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useEffect } from "react";
 import { useSelector } from "react-redux";
 import useApiCalls from "../hooks/useApiCalls";
 import AraciKayitlar from "../components/AraciKayitlar";
@@ -7,16 +7,17 @@ import MusteriKayitlar from "../components/MusteriKayitlar";
 const AccidentRecords = () => {
   const { getRecordAndMediator } = useApiCalls();
   const { record, mediator, loading } = useSelector((state) => state.incident);
-  const { email, isAdmin } = useSelector((state) => state.auth);
+  const { email, isAdmin, loading:loading2, currentUser, first_name, last_name} = useSelector((state) => state.auth);
 
   useEffect(() => {
     getRecordAndMediator();
-    console.log("record:", record);
-    console.log("email:", email);
   }, []);
-
+  console.log("loading2:", loading2)
+  console.log("currentUser:", currentUser)
+  console.log("first_name:", first_name)
+  console.log("last_name:", last_name)
   if (loading) {
-    return <div>Loading</div>;
+    return <section className="min-h-[calc(100vh-8rem)] text-[2rem] flex justify-center items-center "><div>...Yükleniyor</div></section>;
   }
   if (record.length === 0 || record === null) {
     if (isAdmin) {

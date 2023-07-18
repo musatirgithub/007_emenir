@@ -3,7 +3,7 @@ import { phaseConverter } from "../helper/phaseConverter";
 
 const Phase = ({ asama }) => {
   return (
-    <section className="flex py-[1rem]">
+    <section className="flex pt-[1rem] pb-[3rem]">
       <div className="flex items-center">
         <div
           className={`${

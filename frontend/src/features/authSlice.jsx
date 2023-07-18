@@ -7,7 +7,7 @@ const authSlice = createSlice({
     currentUser: null,
     first_name: null,
     last_name: null,
-    loading: false,
+    loading: true,
     error: false,
     isAdmin: false,
     email: null,
@@ -37,8 +37,8 @@ const authSlice = createSlice({
     registerSuccess: (state, { payload }) => {
       state.loading = false;
       state.currentUser = payload?.username;
-      state.first_name = payload?.user?.first_name;
-      state.last_name = payload?.user?.last_name;
+      state.first_name = payload?.first_name;
+      state.last_name = payload?.last_name;
       state.isAdmin = payload?.user?.is_staff || payload?.user?.is_superuser;
       state.email = payload?.user?.email;
       state.token = payload?.key;
