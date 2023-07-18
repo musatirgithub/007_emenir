@@ -6,24 +6,26 @@ import formPage_picture from "../pics/login_register.jpg";
 export const registerSchema = Yup.object().shape({
   username: Yup.string()
     .max(10, "Kullanıcı adı 10 karakterden uzun olamaz")
-    .required(),
+    .required("Kullanıcı adı bos olamaz"),
   first_name: Yup.string()
     .max(20, "İsim 25 karakterden uzun olamaz")
-    .required(),
+    .required("İsim bos olamaz"),
   last_name: Yup.string()
     .max(20, "Soyisim 25 karakterden uzun olamaz")
-    .required(),
+    .required("Soyisim bos olamaz"),
   email: Yup.string()
     .email("Lütfen kayıt olduğunuz eposta adresini girin")
     .required("Eposta adresi girilmesi zorunludur!"),
   password: Yup.string()
     .min(8, "Şifre en az 8 karakter olmalıdır!")
     .max(16, "Şifre 16 karakteri geçemez!")
-    .matches(/\d+/, "Şifre rakam içermek zorundadır!"),
+    .matches(/\d+/, "Şifre rakam içermek zorundadır!")
+    .required("Sifre girilmesi zorunludur!"),
   password2: Yup.string()
     .min(8, "Şifre en az 8 karakter olmalıdır!")
     .max(16, "Şifre 16 karakteri geçemez!")
-    .matches(/\d+/, "Şifre rakam içermek zorundadır!"),
+    .matches(/\d+/, "Şifre rakam içermek zorundadır!")
+    .required("Sifre girilmesi zorunludur!"),
   // .matches(/[a-z]+/, "Password must have a lowercase")
   // .matches(/[A-Z]+/, "Password must have an uppercase")
   // .matches(/[!,?{}><%&$#£+-.]+/, " Password must have a special char"),

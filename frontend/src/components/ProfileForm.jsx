@@ -4,19 +4,24 @@ import styles from "../helper/styles";
 import profile_form from "../pics/profile_form.jpg";
 
 export const profileSchema = Yup.object().shape({
-  isim: Yup.string().max(20, "isim 25 veya daha az karakter olmalıdır"),
+  isim: Yup.string().max(20, "isim 25 veya daha az karakter olmalıdır")
+  .required("Kullanıcı adı bos olamaz"),
   soyisim: Yup.string().max(20, "soyisim 25 veya daha az karakter olmalıdır"),
 
   kimlik_no: Yup.string()
     .min(11, "11 haneli olmalı ve rakamlardan oluşmalıdır!")
     .max(11, "11 haneli olmalı ve rakamlardan oluşmalıdır!")
-    .matches(/^\d{11}$/, "11 haneli olmalı ve rakamlardan oluşmalıdır!"),
+    .matches(/^\d{11}$/, "11 haneli olmalı ve rakamlardan oluşmalıdır!")
+    .required("Kimlik numarasi bos olamaz"),
   phone: Yup.string()
     .min(10, "10 haneli olmalı ve rakamlardan oluşmalıdır!")
     .max(10, "10 haneli olmalı ve rakamlardan oluşmalıdır!")
-    .matches(/^\d{10}$/, "10 haneli olmalı ve rakamlardan oluşmalıdır!"),
-  address: Yup.string().max(150, "Sifre en fazla 16 karakter icermelidir."),
-  iban: Yup.string().max(26, "Sifre en fazla 16 karakter icermelidir."),
+    .matches(/^\d{10}$/, "10 haneli olmalı ve rakamlardan oluşmalıdır!")
+    .required("Telefon numarasi bos olamaz"),
+  address: Yup.string().max(150, "Sifre en fazla 16 karakter icermelidir.")
+  .required("Adres bos olamaz"),
+  iban: Yup.string().max(26, "Sifre en fazla 16 karakter icermelidir.")
+  .required("Iban bos olamaz"),
 });
 
 const ProfileForm = ({ values, handleChange, errors, touched, handleBlur }) => {
