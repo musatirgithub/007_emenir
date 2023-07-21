@@ -21,7 +21,7 @@ const AraciKayitlar = ({ record }) => {
               S.No:
             </th>
             <th className="p-2 border-solid border-zinc-400 border-2 text-center font-normal">
-              Isim
+            İsim
             </th>
             <th className="p-2 border-solid border-zinc-400 border-2 text-center font-normal">
               Soyisim
@@ -36,19 +36,19 @@ const AraciKayitlar = ({ record }) => {
               Model
             </th>
             <th className="p-2 border-solid border-zinc-400 border-2 text-center font-normal">
-              Yil
+              Yıl
             </th>
             <th className="p-2 border-solid border-zinc-400 border-2 text-center font-normal">
               Kaza Tarihi
             </th>
             <th className="p-2 border-solid border-zinc-400 border-2 text-center font-normal">
-              Asama
+              Aşama
             </th>
             <th className="p-2 border-solid border-zinc-400 border-2 text-center font-normal">
-              Asama Tarihi
+              Aşama Tarihi
             </th>
             <th className="p-2 border-solid border-zinc-400 border-2 text-center font-normal">
-              Tahmini Deger Kaybi
+              Tahmini Değer Kaybı
             </th>
           </tr>
         </thead>
