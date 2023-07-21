@@ -29,14 +29,15 @@ export const style2 = {
 
 export const style3 = {
   backgroundImage: `url(${writing_book})`,
-  height: "100vh",
+  // height: "calc(100vh-8rem)",
   backgroundSize: "cover",
-  backgroundPosition: "bottom",
+  backgroundPosition: "center",
   backgroundRepeat: "no-repeat",
-  backgroundAttachment: "fixed",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
+  // backgroundAttachment: "fixed",
+  // backgroundColor: "rgba(0, 0, 0, 0.4)",
+  // display: "flex",
+  // justifyContent: "center",
+  // alignItems: "center",
 };
 
 export const style4 = {
