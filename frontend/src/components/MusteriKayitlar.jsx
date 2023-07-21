@@ -16,7 +16,7 @@ const MusteriKayitlar = ({ record }) => {
   return (
     <section className="min-h-[calc(100vh-8rem)] bg-[#000]/[0.05] flex flex-col justify-center items-center text-[1rem] lg:text-[1.5rem] font-semibold">
       <h1 className="text-[#000]/[0.9] text-center text-[1.3rem] py-[1rem] lg:text-[2rem] ">
-        Araciniza Ait Hasar Kaydi Asagidadir
+        Aracınıza Ait Hasar Kaydı Asağıdadır
       </h1>
       <article className="px-2 bg-zinc-900 py-[1rem] text-[#FFF]/[0.7] font-normal w-[22rem] lg:w-[55rem] lg:px-6">
         <div className="flex">

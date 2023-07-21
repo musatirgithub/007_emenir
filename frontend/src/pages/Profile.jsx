@@ -14,17 +14,16 @@ const Profile = () => {
 
 
   if (loading) {
-    return <div>...Loading</div>;
+    return <section className="min-h-[calc(100vh-8rem)] text-[2rem] flex justify-center items-center "><div>...Yükleniyor</div></section>;
   }
   if (!profile){
-    return <div>...Loading</div>
+    return <section className="min-h-[calc(100vh-8rem)] text-[2rem] flex justify-center items-center "><div>...Yükleniyor</div></section>
   }
 
   // if (profile.id === undefined){
   //   return <div>...Loading</div>
   // }
 
-  console.log(profile[0])
  const {
     id,
     user,

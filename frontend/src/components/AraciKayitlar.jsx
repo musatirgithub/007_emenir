@@ -12,7 +12,7 @@ const AraciKayitlar = ({ record }) => {
   return (
     <section className="min-h-[calc(100vh-8rem)] bg-[#FFF]/[0.05] text-[#FFF]/[0.8] flex flex-col justify-center items-center">
       <h1 className="text-[#000] text-center text-[1.3rem] py-[1rem] lg:text-[2rem] capitalize">
-        {`${first_name} ${last_name} Araci Oldugunuz Kayitlar Asagidadir`}
+        {`${first_name} ${last_name} Aracı Olduğunuz Kayıtlar Asagıdadır`}
       </h1>
       <table className="mx-auto bg-zinc-900">
         <thead className="text-[#C19461]">
