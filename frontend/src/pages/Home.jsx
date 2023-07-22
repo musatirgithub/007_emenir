@@ -5,6 +5,12 @@ import { TbBuildingBank } from "react-icons/tb";
 import { MdRoofing } from "react-icons/md";
 import { BsHouseFill } from "react-icons/bs";
 import { TbUserQuestion } from "react-icons/tb";
+import k1 from "../pics/k1.jpg"
+import k2 from "../pics/k2.jpg"
+import k3 from "../pics/k3.jpg"
+import e1 from "../pics/e1.jpg"
+import e2 from "../pics/e2.jpg"
+import e3 from "../pics/e3.jpg"
 
 const Home = () => {
   return (
@@ -96,15 +102,55 @@ const Home = () => {
 
       {/* Ekibimiz */}
 
-    <section className="w-[90%] mx-auto bg-[#000]">
+    <section className="mx-auto bg-[#000]">
     <h1 className="text-[#FFF] text-center">Ekibimiz</h1>
-    <article>
-      <div className="border border-[#FFF] w-[10rem] rounded">
+    <article className="flex justify-center items-center gap-[1rem] ">
+      <div className="border border-[#FFF] w-[12rem] rounded hover:scale-[1.01]">
         <div>
-          <img src="" alt="" />
+          <img src={k1} alt="kurucu" className="object-cover w-[100%] h-[25rem]"/>
         </div>
         <h2 className="text-[#FFF] text-center">Pelin Emenir</h2>
         <p className="text-[#FFF] text-center">Kurucu</p>
+      </div>
+
+      <div className="border border-[#FFF] w-[12rem] rounded">
+        <div>
+          <img src={e1} alt="kurucu" className="object-cover w-[100%] h-[25rem]"/>
+        </div>
+        <h2 className="text-[#FFF] text-center">Hasan Isbilir</h2>
+        <p className="text-[#FFF] text-center">Kurucu</p>
+      </div>
+
+      <div className="border border-[#FFF] w-[12rem] rounded">
+        <div>
+          <img src={k2} alt="ortak" className="object-cover w-[100%] h-[25rem]"/>
+        </div>
+        <h2 className="text-[#FFF] text-center">Emine Caliskan</h2>
+        <p className="text-[#FFF] text-center">Ortak</p>
+      </div>
+
+      <div className="border border-[#FFF] w-[12rem] rounded">
+        <div>
+          <img src={e2} alt="kurucu" className="object-cover w-[100%] h-[25rem]"/>
+        </div>
+        <h2 className="text-[#FFF] text-center">Mustafa Adaletli</h2>
+        <p className="text-[#FFF] text-center">Avukat</p>
+      </div>
+
+      <div className="border border-[#FFF] w-[12rem] rounded">
+        <div>
+          <img src={e3} alt="kurucu" className="object-cover w-[100%] h-[25rem]"/>
+        </div>
+        <h2 className="text-[#FFF] text-center">Emre Atik</h2>
+        <p className="text-[#FFF] text-center">Avukat</p>
+      </div>
+
+      <div className="border border-[#FFF] w-[12rem] rounded">
+        <div>
+          <img src={k3} alt="kurucu" className="object-cover w-[100%] h-[25rem]"/>
+        </div>
+        <h2 className="text-[#FFF] text-center">Nese Gulumser</h2>
+        <p className="text-[#FFF] text-center">Stajyer</p>
       </div>
     </article>
     </section>
