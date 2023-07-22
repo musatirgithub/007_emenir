@@ -28,7 +28,7 @@ export const style2 = {
 };
 
 export const style3 = {
-  backgroundImage: `url(${writing_book})`,
+  backgroundImage: `url(${court_hammer})`,
   // height: "calc(100vh-8rem)",
   backgroundSize: "cover",
   backgroundPosition: "center",

@@ -9,11 +9,17 @@ import { TbUserQuestion } from "react-icons/tb";
 const Home = () => {
   return (
     <main className="min-h-[calc(100vh-8rem)]">
+
+      {/* parallax resim ve hukuk bürosu adi */}
+
       <div style={style1}>
         <h1 className="text-[#ad8557] text-[1.2rem] font-bold bg-[#000000]/[0.8] p-[1rem] rounded-[2rem] outline outline-offset-[0.4rem] outline-[0.2rem] outline-[#ad8557] lg:text-[2rem]">
           EMENİR <span className="text-[#c79e70]">HUKUK BÜROSU</span>
         </h1>
       </div>
+
+      {/* Çalışma Alanlarımız */}
+
       <div className="text-justify px-[1.5rem] bg-[#000]/[0.05] flex flex-col justify-center items-center py-[2rem]">
         <h2 className=" text-center  font-[100] pb-[1rem] text-[#E05260] text-[2.2rem] lg:text-[4rem]">
         Çalışma Alanlarımız
@@ -87,6 +93,21 @@ const Home = () => {
           </div>
         </div>
       </div>
+
+      {/* Avukatlarimiz */}
+
+    <section className="w-[90%] mx-auto bg-[#000]">
+    <h1 className="text-[#FFF] text-center">Avukatlarimiz</h1>
+    <article>
+      <div>
+        <div>
+          <img src="" alt="" />
+        </div>
+        <h2>Pelin Emenir</h2>
+        <p>Kurucu</p>
+      </div>
+    </article>
+    </section>
     </main>
   );
 };

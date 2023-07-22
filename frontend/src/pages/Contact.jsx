@@ -7,7 +7,7 @@ import { style3 } from "../helper/homepageStyles";
 const Contact = () => {
   return (
     <main className="min-h-[calc(100vh-8rem)]" style={style3}>
-      <div className="min-h-[calc(100vh-8rem)] p-[2rem] text-[#FFF]/[0.7] bg-[#000]/[0.60]">
+      <div className="min-h-[calc(100vh-8rem)] p-[2rem] text-[#FFF]/[0.7] bg-[#000]/[0.40]">
         <div className="flex flex-col gap-[3rem] justify-center items-center py-[1.5rem] lg:flex-row">
           <div className="w-[20rem] h-[8rem] relative  bg-[#000]/[0.6] shadow shadow-2xl hover:scale-110 transition duration-1000 ease-in-out">
             <div className="text-[2rem] bg-[#C19461] w-[4rem] h-[4rem] flex justify-center items-center rounded-[50%] absolute top-[-2rem] left-[8rem]">
@@ -42,7 +42,7 @@ const Contact = () => {
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            className="w-[30rem] h-[16rem] border-solid border-[#681D24] border-[0.125rem] lg:w-[60rem] lg:h-[20rem]"
+            className="w-[30rem] h-[16rem] border-solid border-[#681D24] border-[0.125rem] lg:w-[90%] lg:h-[20rem]"
           ></iframe>
         </div>
       </div>

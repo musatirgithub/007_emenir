@@ -27,7 +27,7 @@ const Navbar = () => {
         <div className="flex justify-between bg-zinc-900 text-[#C19461] px-4 nav-container lg:px-10">
           <div className="logo ">
             <Link to="/">
-              <img src={logo} alt="justice" className="cursor-pointer" />
+              <img src={logo} alt="justice" className="cursor-pointer"/>
             </Link>
             <p>Merhaba {currentUser}</p>
           </div>

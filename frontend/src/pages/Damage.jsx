@@ -7,50 +7,46 @@ import law_office from "../pics/law_office.jpg";
 
 const Damage = () => {
   return (
-    <main className="bg-[#000000]/[0.8] p-[1rem] text-[#FFF]/[0.7] text-[1.3rem]">
+    <main className="m-0 p-0 box-border bg-[#000]/[0.05] p-[1rem] text-[#000]/[0.8] text-[1rem] lg:text-[1.3rem]">
       <section>
-        <div className="lg:flex lg:justify-evenly lg:items-center lg:gap-[1rem]">
-          <div className="my-[1rem] lg:w-[45%]">
-            <h1 className="font-playfair text-center text-[#C19461]">
+        <div className="lg:flex lg:justify-evenly lg:items-center">
+          <div className="lg:w-[50%]">
+            <h1 className="text-center font-[100] text-[#E05260] text-[1.5rem] py-[0.8rem] lg:text-[3rem] lg:py-[0rem]">
               Araç Değer Kaybı Nedir?
             </h1>
           </div>
-          <div className="my-[1rem] lg:w-[45%]">
-            <img src={car_crash} alt="car crash" className="mx-auto" />
+          <div className="px-[0.5rem] lg:w-[50%] lg:px-[0rem]">
+            <img src={car_crash} alt="car crash" className="w-full lg:object-cover grayscale" />
           </div>
         </div>
-        <div className="my-[1rem] lg:flex lg:flex-row-reverse lg:justify-evenly lg:items-center lg:gap-[1rem]">
-          <div className="lg:w-[45%]">
-            <p className="my-[1rem] mx-auto max-w-[40rem]">
+        <div className="lg:flex lg:flex-row-reverse lg:justify-evenly lg:items-center">
+          <div className="lg:w-[50%]">
+            <p className="py-[1rem] px-[1rem] lg:px-[2rem]">
               Araç değer kaybı, kazalı aracın (parçaları daha yenisi veya
               orjinali ile değişse dahi) kazadan önceki değerine nazaran mali
               bir kayıp yaşanması nedeniyle ortaya çıkan bir tazminat türüdür.
             </p>
-            <p className="my-[1rem] mx-auto max-w-[40rem]">
+            <p className="py-[1rem] px-[1rem] lg:px-[2rem]">
               Buna göre, daha az kusurlu veya kusursuz taraf, bir zararın
               tazmini talebini yöneltmektedir.
             </p>
           </div>
+          <div className="px-[0.5rem] lg:w-[50%] lg:px-[0rem]">
           <img
             src={warning_triangle}
             alt="warning sign"
-            className="my-[1rem] mx-auto"
+            className="w-full lg:object-cover grayscale"
           />
+          </div>
         </div>
       </section>
       <section>
-        <h1 className="font-playfair text-center text-[#C19461] my-[1rem]">
+        <div className="lg:flex lg:flex-row lg:justify-evenly lg:items-center">
+        <div className="lg:w-[50%]">
+          <h1 className="text-center font-[100] text-[#E05260] text-[1.5rem] px-[1rem] py-[0.8rem] lg:text-[3rem] lg:px-[2rem] lg:py-[0rem]">
           Hangi Durumlarda Talep Edilebilir?
         </h1>
-        <div className="lg:flex lg:flex-row-reverse lg:justify-evenly lg:items-center">
-          <img
-            src={report}
-            alt="request"
-            className="my-[1rem] mx-auto lg:w-[45%]"
-          />
-
-          <div className="my-[1rem] lg:w-[45%]">
-            <ul className="list-disc list-inside my-[1rem] mx-auto max-w-[40rem]">
+            <ul className="list-disc list-inside py-[1rem] px-[1rem] lg:px-[2rem]">
               <li>Talepte bulunan sürücünün %100 kusurlu olmaması gerekir.</li>
               <li>
                 Değer kaybı tazminatı kaza tarihinden itibaren 2 yıl içerisinde
@@ -66,21 +62,22 @@ const Damage = () => {
               </li>
             </ul>
           </div>
+          <div className="px-[0.5rem] lg:w-[50%] lg:px-[0rem]">
+          <img
+            src={report}
+            alt="request"
+            className="w-full lg:object-cover grayscale"
+          />
+          </div>
         </div>
       </section>
       <section>
-        <h1 className="font-playfair text-center text-[#C19461] my-[1rem]">
+        <div className="lg:flex lg:flex-row-reverse lg:justify-evenly lg:items-center">
+          <div className="lg:w-[50%]">
+          <h1 className="text-center font-[100] text-[#E05260] text-[1.5rem] px-[1rem] py-[0.8rem] lg:text-[3rem] lg:px-[2rem] lg:py-[0rem]">
           Tazminat Süreci Aşamaları Nelerdir?
         </h1>
-        <div className="lg:flex lg:justify-evenly lg:items-center">
-          <img
-            src={woman_money}
-            alt="compansation"
-            className="my-[1rem] mx-auto lg:w-[45%]"
-          />
-
-          <div className="lg:w-[45%]">
-            <ul className="list-disc list-inside my-[1rem] mx-auto max-w-[40rem]">
+            <ul className="list-disc list-inside py-[1rem] px-[1rem] lg:px-[2rem]">
               <li>
                 Büromuzun eksperleri tarafından değer kaybının belirlenmesi,
               </li>
@@ -99,22 +96,23 @@ const Damage = () => {
               </li>
             </ul>
           </div>
+          <div className="px-[0.5rem] lg:w-[50%] lg:px-[0rem]">
+          <img
+            src={woman_money}
+            alt="compansation"
+            className="w-full lg:object-cover grayscale"
+          />
+          </div>
         </div>
       </section>
       <section>
-        <h1 className="font-playfair text-center text-[#C19461] my-[1rem]">
+        <div className="lg:flex lg:justify-evenly lg:items-center">
+          <div className="lg:w-[50%]">
+          <h1 className="text-center font-[100] text-[#E05260] text-[1.5rem] px-[1rem] py-[0.8rem] lg:text-[3rem] lg:px-[2rem] lg:py-[0rem]">
           Neden Emenir Hukuk Bürosu?
         </h1>
-        <div className="lg:flex lg:flex-row-reverse lg:justify-evenly lg:items-center">
-          <img
-            src={law_office}
-            alt="law office"
-            className="my-[1rem] mx-auto lg:w-[45%]"
-          />
-
-          <div className="lg:w-[45%]">
-            <ul className="list-disc list-inside my-[1rem] mx-auto max-w-[40rem]">
-              <p className="my-[1rem] mx-auto">Çünkü;</p>
+            <ul className="list-disc list-inside py-[1rem] px-[1rem] lg:px-[2rem]">
+              <p className="">Çünkü;</p>
               <li>
                 Deneyimli eksperlerimiz sayesinde değer kaybını gerçekçi tespit
                 ediyoruz,
@@ -132,6 +130,13 @@ const Damage = () => {
                 görüyoruz.
               </li>
             </ul>
+          </div>
+          <div className="px-[0.5rem] lg:w-[50%] lg:px-[0rem]">
+          <img
+            src={law_office}
+            alt="law office"
+            className="w-full lg:object-cover grayscale"
+            />
           </div>
         </div>
       </section>
