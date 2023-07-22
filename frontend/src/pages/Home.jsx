@@ -94,17 +94,17 @@ const Home = () => {
         </div>
       </div>
 
-      {/* Avukatlarimiz */}
+      {/* Ekibimiz */}
 
     <section className="w-[90%] mx-auto bg-[#000]">
-    <h1 className="text-[#FFF] text-center">Avukatlarimiz</h1>
+    <h1 className="text-[#FFF] text-center">Ekibimiz</h1>
     <article>
-      <div>
+      <div className="border border-[#FFF] w-[10rem] rounded">
         <div>
           <img src="" alt="" />
         </div>
-        <h2>Pelin Emenir</h2>
-        <p>Kurucu</p>
+        <h2 className="text-[#FFF] text-center">Pelin Emenir</h2>
+        <p className="text-[#FFF] text-center">Kurucu</p>
       </div>
     </article>
     </section>
