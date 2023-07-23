@@ -119,11 +119,11 @@ const Damage = () => {
               </li>
               <li>
                 Müşterilerimizin en kısa sürede tazminatını alabilmesi için
-                deneyimli bir ekiple hız odaklı çalışıyoruz,
+                dinamik bir ekiple hız odaklı çalışıyoruz,
               </li>
               <li>
-                Müşterilerimizi dosyanın durumundaki her gelişmeden haberdar
-                ediyoruz,
+                Dosyanın durumundaki her gelişmeden haberdar olunmasını
+                sağlıyoruz,
               </li>
               <li>
                 Müşteri memnuniyetini büromuzun en önemli hedefi olarak

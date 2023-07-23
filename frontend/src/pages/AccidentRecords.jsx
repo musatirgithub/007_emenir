@@ -28,7 +28,7 @@ const AccidentRecords = () => {
       return (
         <article className="min-h-[calc(100vh-8rem)] bg-[#000]/[0.05] flex justify-center items-center">
           <h1 className="text-[#000]/[0.8] text-center text-[1.3rem] lg:text-[2rem]">
-            Adiniza Acilmis Kaza Kaydi Bulunmamaktadir.
+            Adınıza Açılan Kaza Kaydı Bulunmamaktadır.
           </h1>
         </article>
       );
