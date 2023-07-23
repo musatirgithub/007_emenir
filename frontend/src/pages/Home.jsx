@@ -163,8 +163,8 @@ const Home = () => {
     {/* Iletisim */}
     <section className="text-justify px-[1.5rem] bg-[#000]/[0.05] py-[2rem]">
       <h1 className=" text-center  font-[100] pb-[1rem] text-[#E05260] text-[2.2rem] lg:text-[4rem]">Bize Ulaşın</h1>
-      <article className="flex flex-col items-center gap-[1rem] lg:flex-row lg:content-center lg:gap-[2rem]">
-        <div className="flex flex-col content-center items-center gap-[1rem]">
+      <article className="flex flex-col items-center gap-[2.5rem] pb-[1rem] lg:flex-row lg:justify-evenly lg:pb-[2rem]">
+        <div className="flex flex-col contents-center items-center gap-[1rem]">
         <FaPhoneAlt className="text-[2rem] text-[#E05260]"/>
         <p>0 (312) 433 33 33</p>
         </div>
