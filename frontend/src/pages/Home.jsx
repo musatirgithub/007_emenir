@@ -5,6 +5,9 @@ import { TbBuildingBank } from "react-icons/tb";
 import { MdRoofing } from "react-icons/md";
 import { BsHouseFill } from "react-icons/bs";
 import { TbUserQuestion } from "react-icons/tb";
+import { MdEmail } from "react-icons/md";
+import { ImLocation } from "react-icons/im";
+import { FaPhoneAlt } from "react-icons/fa";
 import k1 from "../pics/k1.jpg"
 import k2 from "../pics/k2.jpg"
 import k3 from "../pics/k3.jpg"
@@ -160,6 +163,31 @@ const Home = () => {
     {/* Iletisim */}
     <section className="text-justify px-[1.5rem] bg-[#000]/[0.05] py-[2rem]">
       <h1 className=" text-center  font-[100] pb-[1rem] text-[#E05260] text-[2.2rem] lg:text-[4rem]">Bize Ulaşın</h1>
+      <article>
+        <div>
+        <FaPhoneAlt />
+        <p>0 (312) 433 33 33</p>
+        </div>
+        <div>
+        <ImLocation />
+        <p>GMK Bulvari No:105/11</p>
+              <p>06440 Cankaya/ANKARA</p>
+        </div>
+        <div>
+        <MdEmail />
+        <p>emenirhukuk@gmail.com</p>
+        </div>
+      </article>
+      <article className="flex justify-center align-center my-[0.5rem]">
+          <iframe
+            title="emenir_map"
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d24475.566862696676!2d32.82572829781518!3d39.931415571521846!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x14d34efb3d41d359%3A0x466edc101cb7d967!2sAn%C4%B1ttepe%2C%20Gazi%20Mustafa%20Kemal%20Blv.%20No%3A105%2C%2006570%20%C3%87ankaya%2FAnkara%2C%20T%C3%BCrkiye!5e0!3m2!1str!2sde!4v1689516982768!5m2!1str!2sde"
+            allowfullscreen=""
+            loading="lazy"
+            referrerpolicy="no-referrer-when-downgrade"
+            className="w-[30rem] h-[16rem] border-solid border-[#681D24] border-[0.125rem] lg:w-[90%] lg:h-[20rem]"
+          ></iframe>
+        </article>
     </section>
     </main>
   );
