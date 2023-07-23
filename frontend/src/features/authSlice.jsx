@@ -10,6 +10,7 @@ const authSlice = createSlice({
     loading: true,
     error: false,
     isAdmin: false,
+    isSuperUser:false,
     email: null,
     token: null,
   },
@@ -23,7 +24,8 @@ const authSlice = createSlice({
       state.currentUser = payload?.user?.username;
       state.first_name = payload?.user?.first_name;
       state.last_name = payload?.user?.last_name;
-      state.isAdmin = payload?.user?.is_staff || payload?.user?.is_superuser;
+      state.isAdmin = payload?.user?.is_staff;
+      state.isSuperUser = payload?.user?.is_superuser;
       state.email = payload?.user?.email;
       state.token = payload?.key;
     },

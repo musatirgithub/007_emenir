@@ -3,15 +3,19 @@ import { useSelector } from "react-redux";
 import useApiCalls from "../hooks/useApiCalls";
 import AraciKayitlar from "../components/AraciKayitlar";
 import MusteriKayitlar from "../components/MusteriKayitlar";
+import PatronKayitlar from "../components/PatronKayitlar";
 
 const AccidentRecords = () => {
   const { getRecordAndMediator } = useApiCalls();
   const { record, loading } = useSelector((state) => state.incident);
-  const { email, isAdmin} = useSelector((state) => state.auth);
+  const { email, isAdmin, isSuperUser} = useSelector((state) => state.auth);
 
   useEffect(() => {
     getRecordAndMediator();
   }, []);
+  console.log("isSuperUser:", isSuperUser)
+  console.log("isAdmin:", isAdmin)
+
   if (loading) {
     return <section className="min-h-[calc(100vh-8rem)] text-[2rem] flex justify-center items-center "><div>...Yükleniyor</div></section>;
   }
@@ -33,6 +37,9 @@ const AccidentRecords = () => {
         </article>
       );
     }
+  }
+  if(isSuperUser){
+    return <PatronKayitlar record={record}/> 
   }
   if (isAdmin || record[0]?.user.email !== email) {
     return <AraciKayitlar record={record} />;
