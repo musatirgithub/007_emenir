@@ -163,18 +163,20 @@ const Home = () => {
     {/* Iletisim */}
     <section className="text-justify px-[1.5rem] bg-[#000]/[0.05] py-[2rem]">
       <h1 className=" text-center  font-[100] pb-[1rem] text-[#E05260] text-[2.2rem] lg:text-[4rem]">Bize Ulaşın</h1>
-      <article>
-        <div>
-        <FaPhoneAlt />
+      <article className="flex flex-col items-center gap-[1rem] lg:flex-row lg:content-center lg:gap-[2rem]">
+        <div className="flex flex-col content-center items-center gap-[1rem]">
+        <FaPhoneAlt className="text-[2rem] text-[#E05260]"/>
         <p>0 (312) 433 33 33</p>
         </div>
+        <div className="flex flex-col content-center items-center gap-[1rem]">
+        <ImLocation className="text-[2rem] text-[#E05260]"/>
         <div>
-        <ImLocation />
         <p>GMK Bulvari No:105/11</p>
-              <p>06440 Cankaya/ANKARA</p>
+        <p>06440 Cankaya/ANKARA</p>
         </div>
-        <div>
-        <MdEmail />
+        </div>
+        <div className="flex flex-col content-center items-center gap-[1rem]">
+        <MdEmail className="text-[2rem] text-[#E05260]"/>
         <p>emenirhukuk@gmail.com</p>
         </div>
       </article>
@@ -185,7 +187,7 @@ const Home = () => {
             allowfullscreen=""
             loading="lazy"
             referrerpolicy="no-referrer-when-downgrade"
-            className="w-[30rem] h-[16rem] border-solid border-[#681D24] border-[0.125rem] lg:w-[90%] lg:h-[20rem]"
+            className="w-[30rem] h-[16rem] lg:w-[90%] lg:h-[40rem]"
           ></iframe>
         </article>
     </section>
