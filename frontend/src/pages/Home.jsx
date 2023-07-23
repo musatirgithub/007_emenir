@@ -26,7 +26,7 @@ const Home = () => {
 
       {/* Çalışma Alanlarımız */}
 
-      <div className="text-justify px-[1.5rem] bg-[#000]/[0.05] flex flex-col justify-center items-center py-[2rem]">
+      <section className="text-justify px-[1.5rem] bg-[#000]/[0.05] flex flex-col justify-center items-center py-[2rem]">
         <h2 className=" text-center  font-[100] pb-[1rem] text-[#E05260] text-[2.2rem] lg:text-[4rem]">
         Çalışma Alanlarımız
         </h2>
@@ -98,22 +98,25 @@ const Home = () => {
             </p>
           </div>
         </div>
-      </div>
+      </section>
 
       {/* Ekibimiz */}
 
     <section className="mx-auto bg-[#000]">
-    <h1 className="text-[#FFF] text-center">Ekibimiz</h1>
-    <article className="flex justify-center items-center gap-[1rem] ">
-      <div className="border border-[#FFF] w-[12rem] rounded hover:scale-[1.01]">
+    <h1 className=" text-center  font-[100] pb-[1rem] text-[#E05260] text-[2.2rem] lg:text-[4rem]">Ekibimiz</h1>
+    <article className="flex flex-wrap justify-center items-center gap-[1rem] p-[1rem] lg:p-[2rem]">
+
+      <div className="border border-[#FFF] border-[0.1rem] w-[12rem] rounded transition-transform duration-500 hover:scale-[1.01]">
         <div>
           <img src={k1} alt="kurucu" className="object-cover w-[100%] h-[25rem]"/>
         </div>
+        <div className="">
         <h2 className="text-[#FFF] text-center">Pelin Emenir</h2>
         <p className="text-[#FFF] text-center">Kurucu</p>
+        </div>
       </div>
 
-      <div className="border border-[#FFF] w-[12rem] rounded">
+      <div className="border border-[#FFF] border-[0.1rem] w-[12rem] rounded transition-all duration-500 hover:scale-[1.01]">
         <div>
           <img src={e1} alt="kurucu" className="object-cover w-[100%] h-[25rem]"/>
         </div>
@@ -121,7 +124,7 @@ const Home = () => {
         <p className="text-[#FFF] text-center">Kurucu</p>
       </div>
 
-      <div className="border border-[#FFF] w-[12rem] rounded">
+      <div className="border border-[#FFF] border-[0.1rem] w-[12rem] rounded transition-all duration-500 hover:scale-[1.01]">
         <div>
           <img src={k2} alt="ortak" className="object-cover w-[100%] h-[25rem]"/>
         </div>
@@ -129,7 +132,7 @@ const Home = () => {
         <p className="text-[#FFF] text-center">Ortak</p>
       </div>
 
-      <div className="border border-[#FFF] w-[12rem] rounded">
+      <div className="border border-[#FFF] border-[0.1rem] w-[12rem] rounded transition-all duration-500 hover:scale-[1.01]">
         <div>
           <img src={e2} alt="kurucu" className="object-cover w-[100%] h-[25rem]"/>
         </div>
@@ -137,7 +140,7 @@ const Home = () => {
         <p className="text-[#FFF] text-center">Avukat</p>
       </div>
 
-      <div className="border border-[#FFF] w-[12rem] rounded">
+      <div className="border border-[#FFF] border-[0.1rem] w-[12rem] rounded transition-all duration-500 hover:scale-[1.01]">
         <div>
           <img src={e3} alt="kurucu" className="object-cover w-[100%] h-[25rem]"/>
         </div>
@@ -145,7 +148,7 @@ const Home = () => {
         <p className="text-[#FFF] text-center">Avukat</p>
       </div>
 
-      <div className="border border-[#FFF] w-[12rem] rounded">
+      <div className="border border-[#FFF] border-[0.1rem] w-[12rem] rounded transition-all duration-500 hover:scale-[1.01]">
         <div>
           <img src={k3} alt="kurucu" className="object-cover w-[100%] h-[25rem]"/>
         </div>
@@ -153,6 +156,10 @@ const Home = () => {
         <p className="text-[#FFF] text-center">Stajyer</p>
       </div>
     </article>
+    </section>
+    {/* Iletisim */}
+    <section className="text-justify px-[1.5rem] bg-[#000]/[0.05] py-[2rem]">
+      <h1 className=" text-center  font-[100] pb-[1rem] text-[#E05260] text-[2.2rem] lg:text-[4rem]">Bize Ulaşın</h1>
     </section>
     </main>
   );
