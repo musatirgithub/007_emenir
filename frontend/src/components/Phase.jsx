@@ -9,7 +9,7 @@ const Phase = ({ asama }) => {
           className={`${
             asama >= 1
               ? "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#C19461] rounded-full text-center relative lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
-              : "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#000]/[0.3] rounded-full text-center lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
+              : "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#000]/[0.3] rounded-full text-center relative lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
           }`}
         >
           1
@@ -24,6 +24,7 @@ const Phase = ({ asama }) => {
           </span>
         </div>
       </div>
+
       <div className="flex items-center">
         <div
           className={`${
@@ -36,7 +37,7 @@ const Phase = ({ asama }) => {
           className={`${
             asama >= 2
               ? "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#C19461] rounded-full text-center relative lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
-              : "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#000]/[0.3] rounded-full text-center lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
+              : "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#000]/[0.3] rounded-full text-center relative lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
           }`}
         >
           2
@@ -51,6 +52,7 @@ const Phase = ({ asama }) => {
           </span>
         </div>
       </div>
+
       <div className="flex items-center">
         <div
           className={`${
@@ -63,7 +65,7 @@ const Phase = ({ asama }) => {
           className={`${
             asama >= 3
               ? "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#C19461] rounded-full text-center relative lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
-              : "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#000]/[0.3] rounded-full text-center lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
+              : "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#000]/[0.3] rounded-full text-center relative lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
           }`}
         >
           3
@@ -78,6 +80,7 @@ const Phase = ({ asama }) => {
           </span>
         </div>
       </div>
+
       <div className="flex items-center">
         <div
           className={`${
@@ -90,7 +93,7 @@ const Phase = ({ asama }) => {
           className={`${
             asama >= 4
               ? "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#C19461] rounded-full text-center relative lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
-              : "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#000]/[0.3] rounded-full text-center lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
+              : "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#000]/[0.3] rounded-full text-center relative lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
           }`}
         >
           4
@@ -105,6 +108,7 @@ const Phase = ({ asama }) => {
           </span>
         </div>
       </div>
+
       <div className="flex items-center">
         <div
           className={`${
@@ -117,7 +121,7 @@ const Phase = ({ asama }) => {
           className={`${
             asama >= 5
               ? "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#C19461] rounded-full text-center relative lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
-              : "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#000]/[0.3] rounded-full text-center lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
+              : "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#000]/[0.3] rounded-full text-center relative lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
           }`}
         >
           5
