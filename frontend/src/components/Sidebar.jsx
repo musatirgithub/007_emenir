@@ -49,17 +49,17 @@ const Sidebar = () => {
           </li>
           <li>
             <Link to="/damage" onClick={handleCloseSidebar}>
-              Deger Kaybi Nedir
+              Değer Kaybı Nedir
             </Link>
           </li>
           <li>
             <Link to="/contact" onClick={handleCloseSidebar}>
-              Iletisim
+            İletişim
             </Link>
           </li>
           <li>
             <Link to="/records" onClick={handleCloseSidebar}>
-              Kayitlar
+              Kayıtlar
             </Link>
           </li>
           <li>
