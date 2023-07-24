@@ -17,7 +17,7 @@ const Phase = ({ asama }) => {
             className={`${
               asama == 1
                 ? "absolute top-[2rem] left-[2rem] p-[0.2rem] text-[1rem] w-[10rem] translate-x-[-50%] leading-[1.2rem] lg:top-[3rem] lg:left-[1rem]"
-                : "hidden p-[0.2rem] group-hover:absolute group-hover:top-[2rem] group-hover:left-[2rem] group-hover:text-[1rem] group-hover:z-10 group-hover:bg-[#FFF] group-hover:bg-opacity-100  group-hover:w-[10rem] group-hover:translate-x-[-50%] group-hover:leading-[1.2rem] group-hover:block group-hover:lg:top-[3rem] group-hover:lg:left-[1rem]"
+                : "hidden p-[0.2rem] group-hover:absolute group-hover:top-[2rem] group-hover:left-[2rem] group-hover:text-[1rem] group-hover:z-10 group-hover:bg-[#F2F2F2] group-hover:bg-opacity-100  group-hover:w-[10rem] group-hover:translate-x-[-50%] group-hover:leading-[1.2rem] group-hover:block group-hover:lg:top-[3rem] group-hover:lg:left-[1rem]"
             }`}
           >
             {phaseConverter(1)}
@@ -45,7 +45,7 @@ const Phase = ({ asama }) => {
             className={`${
               asama == 2
               ? "absolute top-[2rem] left-[2rem] p-[0.2rem] text-[1rem] w-[10rem] translate-x-[-50%] leading-[1.2rem] lg:top-[3rem] lg:left-[1rem]"
-              : "hidden p-[0.2rem] group-hover:absolute group-hover:top-[2rem] group-hover:left-[2rem] group-hover:text-[1rem] group-hover:z-10 group-hover:bg-[#FFF] group-hover:bg-opacity-100  group-hover:w-[10rem] group-hover:translate-x-[-50%] group-hover:leading-[1.2rem] group-hover:block group-hover:lg:top-[3rem] group-hover:lg:left-[1rem]"
+              : "hidden p-[0.2rem] group-hover:absolute group-hover:top-[2rem] group-hover:left-[2rem] group-hover:text-[1rem] group-hover:z-10 group-hover:bg-[#F2F2F2] group-hover:bg-opacity-100  group-hover:w-[10rem] group-hover:translate-x-[-50%] group-hover:leading-[1.2rem] group-hover:block group-hover:lg:top-[3rem] group-hover:lg:left-[1rem]"
             }`}
           >
             {phaseConverter(2)}
@@ -73,7 +73,7 @@ const Phase = ({ asama }) => {
             className={`${
               asama == 3
               ? "absolute top-[2rem] left-[2rem] p-[0.2rem] text-[1rem] w-[10rem] translate-x-[-50%] leading-[1.2rem] lg:top-[3rem] lg:left-[1rem]"
-              : "hidden p-[0.2rem] group-hover:absolute group-hover:top-[2rem] group-hover:left-[2rem] group-hover:text-[1rem] group-hover:z-10 group-hover:bg-[#FFF] group-hover:bg-opacity-100  group-hover:w-[10rem] group-hover:translate-x-[-50%] group-hover:leading-[1.2rem] group-hover:block group-hover:lg:top-[3rem] group-hover:lg:left-[1rem]"
+              : "hidden p-[0.2rem] group-hover:absolute group-hover:top-[2rem] group-hover:left-[2rem] group-hover:text-[1rem] group-hover:z-10 group-hover:bg-[#F2F2F2] group-hover:bg-opacity-100  group-hover:w-[10rem] group-hover:translate-x-[-50%] group-hover:leading-[1.2rem] group-hover:block group-hover:lg:top-[3rem] group-hover:lg:left-[1rem]"
             }`}
           >
             {phaseConverter(3)}
@@ -101,7 +101,7 @@ const Phase = ({ asama }) => {
             className={`${
               asama == 4
               ? "absolute top-[2rem] left-[2rem] p-[0.2rem] text-[1rem] w-[10rem] translate-x-[-50%] leading-[1.2rem] lg:top-[3rem] lg:left-[1rem]"
-              : "hidden p-[0.2rem] group-hover:absolute group-hover:top-[2rem] group-hover:left-[2rem] group-hover:text-[1rem] group-hover:z-10 group-hover:bg-[#FFF] group-hover:bg-opacity-100  group-hover:w-[10rem] group-hover:translate-x-[-50%] group-hover:leading-[1.2rem] group-hover:block group-hover:lg:top-[3rem] group-hover:lg:left-[1rem]"
+              : "hidden p-[0.2rem] group-hover:absolute group-hover:top-[2rem] group-hover:left-[2rem] group-hover:text-[1rem] group-hover:z-10 group-hover:bg-[#F2F2F2] group-hover:bg-opacity-100  group-hover:w-[10rem] group-hover:translate-x-[-50%] group-hover:leading-[1.2rem] group-hover:block group-hover:lg:top-[3rem] group-hover:lg:left-[1rem]"
             }`}
           >
             {phaseConverter(4)}
@@ -129,7 +129,7 @@ const Phase = ({ asama }) => {
             className={`${
               asama == 5
               ? "absolute top-[2rem] left-[2rem] p-[0.2rem] text-[1rem] w-[10rem] translate-x-[-50%] leading-[1.2rem] lg:top-[3rem] lg:left-[1rem]"
-              : "hidden p-[0.2rem] group-hover:absolute group-hover:top-[2rem] group-hover:left-[2rem] group-hover:text-[1rem] group-hover:z-10 group-hover:bg-[#FFF] group-hover:bg-opacity-100  group-hover:w-[10rem] group-hover:translate-x-[-50%] group-hover:leading-[1.2rem] group-hover:block group-hover:lg:top-[3rem] group-hover:lg:left-[1rem]"
+              : "hidden p-[0.2rem] group-hover:absolute group-hover:top-[2rem] group-hover:left-[2rem] group-hover:text-[1rem] group-hover:z-10 group-hover:bg-[#F2F2F2] group-hover:bg-opacity-100  group-hover:w-[10rem] group-hover:translate-x-[-50%] group-hover:leading-[1.2rem] group-hover:block group-hover:lg:top-[3rem] group-hover:lg:left-[1rem]"
             }`}
           >
             {phaseConverter(5)}
