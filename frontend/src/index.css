@@ -106,3 +106,10 @@ code {
   font-size: 2rem;
   font-weight: 700;
 }
+
+.phase-show{
+  position: absolute;
+  top: 2rem;
+  left: 2rem;
+  cursor: pointer;
+}
