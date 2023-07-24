@@ -62,8 +62,8 @@ const Phase = ({ asama }) => {
         <div
           className={`${
             asama >= 3
-              ? "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#C19461] rounded-full text-center relative lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem]"
-              : "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#000]/[0.3] rounded-full text-center lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem]"
+              ? "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#C19461] rounded-full text-center relative lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
+              : "w-[1.5rem] h-[1.5rem] leading-[1.5rem] bg-[#000]/[0.3] rounded-full text-center lg:w-[3rem] lg:h-[3rem] lg:leading-[3rem] group"
           }`}
         >
           3
