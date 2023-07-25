@@ -13,8 +13,6 @@ const AccidentRecords = () => {
   useEffect(() => {
     getRecordAndMediator();
   }, []);
-  console.log("isSuperUser:", isSuperUser)
-  console.log("isAdmin:", isAdmin)
 
   if (loading) {
     return <section className="min-h-[calc(100vh-8rem)] text-[2rem] flex justify-center items-center "><div>...Yükleniyor</div></section>;

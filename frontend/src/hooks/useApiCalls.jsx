@@ -49,7 +49,6 @@ const useApiCalls = () => {
       const { data } = await axiosWithToken.get("users/profile/");
       dispatch(getProfileSuccess(data));
     } catch (error) {
-      console.log(error);
       dispatch(fetchFail());
     }
   };
@@ -62,7 +61,6 @@ const useApiCalls = () => {
       getProfile();
       toastSuccessNotify("Profil güncellendi!");
     } catch (error) {
-      console.log(error);
       dispatch(fetchFail());
       toastErrorNotify("Profil güncellenemedi!");
     }
