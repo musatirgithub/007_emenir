@@ -1,7 +1,5 @@
-import court_hammer from "../pics/court_hammer.jpg";
-import writing_book from "../pics/writing_book.jpg";
+import court_hammer2 from "../pics/court_hammer2.jpg";
 import eyeglasses2 from "../pics/eyeglasses2.jpg";
-import justice_concept from "../pics/justice_concept.jpg";
 
 export const style1 = {
   backgroundImage: `url(${eyeglasses2})`,
@@ -15,20 +13,8 @@ export const style1 = {
   alignItems: "center",
 };
 
-export const style2 = {
-  backgroundImage: `url(${justice_concept})`,
-  height: "100vh",
-  backgroundSize: "cover",
-  backgroundPosition: "bottom",
-  backgroundRepeat: "no-repeat",
-  backgroundAttachment: "fixed",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-};
-
 export const style3 = {
-  backgroundImage: `url(${court_hammer})`,
+  backgroundImage: `url(${court_hammer2})`,
   // height: "calc(100vh-8rem)",
   backgroundSize: "cover",
   backgroundPosition: "center",
@@ -40,14 +26,3 @@ export const style3 = {
   // alignItems: "center",
 };
 
-export const style4 = {
-  backgroundImage: `url(${court_hammer})`,
-  height: "100vh",
-  backgroundSize: "cover",
-  backgroundPosition: "bottom",
-  backgroundRepeat: "no-repeat",
-  backgroundAttachment: "fixed",
-  display: "flex",
-  justifyContent: "center",
-  alignItems: "center",
-};
