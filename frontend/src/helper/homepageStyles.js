@@ -1,10 +1,10 @@
 import court_hammer from "../pics/court_hammer.jpg";
 import writing_book from "../pics/writing_book.jpg";
-import eyeglasses from "../pics/eyeglasses.jpg";
+import eyeglasses2 from "../pics/eyeglasses2.jpg";
 import justice_concept from "../pics/justice_concept.jpg";
 
 export const style1 = {
-  backgroundImage: `url(${eyeglasses})`,
+  backgroundImage: `url(${eyeglasses2})`,
   height: "100vh",
   backgroundSize: "cover",
   backgroundPosition: "bottom",
